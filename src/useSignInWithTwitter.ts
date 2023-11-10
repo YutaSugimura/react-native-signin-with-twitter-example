@@ -86,14 +86,23 @@ export const useSignInWithTwitter = () => {
             {headers: {...oauth.toHeader(oauth.authorize(request_data))}},
           );
           const responseData = res.data;
-          const accessToken = responseData.match(/oauth_token=([^&]+)/)[1];
-          const accessTokenSecret = responseData.match(
+          const authToken = responseData.match(/oauth_token=([^&]+)/)[1];
+          const authTokenSecret = responseData.match(
             /oauth_token_secret=([^&]+)/,
           )[1];
 
+          // https://rnfirebase.io/auth/social-auth#twitter
+          // import auth from '@react-native-firebase/auth';
+          // const twitterCredential = auth.TwitterAuthProvider.credential(authToken, authTokenSecret);
+
+          // // Sign-in the user with the credential
+          // const result = auth().signInWithCredential(twitterCredential);
+
           Alert.alert(
             'Success',
-            `accessToken: ${accessToken}\naccessTokenSecret: ${accessTokenSecret}`,
+            `authToken: ${authToken.slice(0, 12) + '...'}\nauthTokenSecret: ${
+              authTokenSecret.slice(1, 12) + '...'
+            }`,
           );
         } catch (error) {
           console.log('Error: access token', error);
