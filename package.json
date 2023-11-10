@@ -10,8 +10,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^1.6.1",
+    "oauth-1.0a": "^2.2.6",
     "react": "18.2.0",
-    "react-native": "0.72.6"
+    "react-native": "0.72.6",
+    "react-native-config": "^1.5.1",
+    "react-native-quick-base64": "^2.0.7",
+    "react-native-quick-crypto": "^0.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -23,6 +28,7 @@
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.2.1",
+    "babel-plugin-module-resolver": "^5.0.0",
     "eslint": "^8.19.0",
     "jest": "^29.2.1",
     "metro-react-native-babel-preset": "0.76.8",
