@@ -36,6 +36,9 @@ TWITTER_CONSUMER_SECRET=your-consumer-secret
 yarn start
 ```
 
+## References
+- [Twitter Developer Platform (Authentication)](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)
+
 ## License
 
 This project is licensed under the MIT License 
