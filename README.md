@@ -35,3 +35,7 @@ TWITTER_CONSUMER_SECRET=your-consumer-secret
 ```zsh
 yarn start
 ```
+
+## License
+
+This project is licensed under the MIT License 
