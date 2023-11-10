@@ -8,7 +8,7 @@ import crypto from 'react-native-quick-crypto';
 const CONSUMER_KEY = Config.TWITTER_CONSUMER_KEY;
 const CONSUMER_SECRET = Config.TWITTER_CONSUMER_SECRET;
 const TWITTER_API = 'https://api.twitter.com';
-const OAUTH_CALLBACK_URL = 'oauth-app://oauth/twitter'; // your app scheme
+const OAUTH_CALLBACK_URL = 'oauth-app://oauth'; // your app scheme
 
 export const useSignInWithTwitter = () => {
   // request token
@@ -100,8 +100,8 @@ export const useSignInWithTwitter = () => {
 
           Alert.alert(
             'Success',
-            `authToken: ${authToken.slice(0, 12) + '...'}\nauthTokenSecret: ${
-              authTokenSecret.slice(1, 12) + '...'
+            `authToken: ${authToken.slice(0, 7) + '...'}\nauthTokenSecret: ${
+              authTokenSecret.slice(1, 7) + '...'
             }`,
           );
         } catch (error) {
